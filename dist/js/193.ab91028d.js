@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkcrm_malu"]=self["webpackChunkcrm_malu"]||[]).push([[193],{1193:function(u,n,r){r.r(n),r.d(n,{default:function(){return f}});var c=function(){var u=this,n=u._self._c;return n("h1",[u._v("这是角色界面")])},e=[],l={},t=l,s=r(1001),a=(0,s.Z)(t,c,e,!1,null,"56d932c0",null),f=a.exports}}]);
+//# sourceMappingURL=193.ab91028d.js.map

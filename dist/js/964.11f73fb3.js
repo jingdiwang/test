@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkcrm_malu"]=self["webpackChunkcrm_malu"]||[]).push([[964],{7964:function(u,e,n){n.r(e),n.d(e,{default:function(){return f}});var r=function(){var u=this,e=u._self._c;return e("h1",[u._v("这是教师界面")])},l=[],t={},c=t,a=n(1001),s=(0,a.Z)(c,r,l,!1,null,"8e7b84ae",null),f=s.exports}}]);
+//# sourceMappingURL=964.11f73fb3.js.map
