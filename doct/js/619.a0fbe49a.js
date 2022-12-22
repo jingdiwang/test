@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkmaluyanxuanvue2"]=self["webpackChunkmaluyanxuanvue2"]||[]).push([[619],{2619:function(u,n,e){e.r(n),e.d(n,{default:function(){return f}});var l=function(){var u=this,n=u._self._c;return n("div",[u._v(" 用户 ")])},a=[],t={},r=t,s=e(1001),c=(0,s.Z)(r,l,a,!1,null,null,null),f=c.exports}}]);
+//# sourceMappingURL=619.a0fbe49a.js.map
