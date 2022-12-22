@@ -12,9 +12,9 @@ import "./assets/flexible.js"
 
 import "./assets/fonts/iconfont.css"
 
-import vant from 'vant';
+import Vant from 'vant';
 import 'vant/lib/index.css';
-Vue.use(vant)
+Vue.use(Vant)
 
 new Vue({
   router,
