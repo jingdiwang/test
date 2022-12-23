@@ -48,6 +48,14 @@ const routes = [
     meta: {
       isShowNav: false
     }
+  },
+  {
+    path: '/myorder',
+    name: 'myorder',
+    component: () => import('../views/MyOrderView/MyOrderView.vue'),
+    meta: {
+      isShowNav: false
+    }
   }
 ]
 

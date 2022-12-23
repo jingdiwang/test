@@ -11,7 +11,7 @@
         <Verify ref="veri" :type="2" @error="alertFn(2)" @success="alertFn(1)" :showButton="false"></Verify>
         <p class="link-register" @click="isTitle = !isTitle">{{ isTitle ? '立即注册' : '已有账号，立即登录' }}</p>
         <div style="margin: 16px;">
-          <van-button round block type="info" native-type="submit">登录</van-button>
+          <van-button round block type="info" native-type="submit">{{ isTitle ? '登录' : '注册' }}</van-button>
         </div>
       </van-form>
     </div>
@@ -21,6 +21,9 @@
 <script>
 import TopCom from '@/components/TopCom';
 import Verify from 'vue2-verify'
+
+import { login, register } from '../../api/user'
+import { Form, Field, Button, Notify } from 'vant';
 export default {
   data() {
     return {
@@ -31,12 +34,41 @@ export default {
   },
   methods: {
     onSubmit(values) {
-      console.log('submit', values);
+      if (this.isTitle) {
+        login(this.username, this.password).then((res) => {
+          localStorage.setItem('xToken', res.data.data)
+          Notify({
+            message: '登录成功',
+            color: '#fff',
+            background: '#1baeae',
+          });
+          this.$router.push({
+            name: 'user'
+          })
+        }).catch((err) => {
+          console.log(err)
+          Notify({ type: 'danger', message: '登录失败' });
+        })
+      } else {
+        register(this.username, this.password).then((res) => {
+          Notify({
+            message: '注册成功',
+            color: '#fff',
+            background: '#1baeae',
+          });
+        }).catch((err) => {
+          console.log(err)
+          Notify({ type: 'danger', message: '注册失败' });
+        })
+      }
     },
   },
   components: {
     TopCom,
-    Verify
+    Verify,
+    vanForm: Form,
+    vanField: Field,
+    vanButton: Button
   }
 }
 </script>

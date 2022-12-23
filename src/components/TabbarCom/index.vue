@@ -28,8 +28,12 @@
 </template>
 
 <script>
+import { Tabbar, TabbarItem } from 'vant';
 export default {
-
+  components: {
+    vanTabbar: Tabbar,
+    vanTabbarItem: TabbarItem
+  }
 }
 </script>
 

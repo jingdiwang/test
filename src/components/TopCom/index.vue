@@ -7,8 +7,11 @@
 </template>
 
 <script>
-import { Toast } from 'vant';
+import { Toast, NavBar } from 'vant';
 export default {
+  components: {
+    vanNavBar: NavBar
+  },
   props: {
     title: {
       type: String,
@@ -21,7 +24,7 @@ export default {
   },
   methods: {
     onClickLeft() {
-      Toast('返回');
+      this.$router.back()
     },
     onClickRight() {
       Toast('按钮');
@@ -29,3 +32,13 @@ export default {
   },
 }
 </script>
+
+<style lang="less">
+.van-nav-bar__left {
+  left: 10px;
+}
+
+.van-nav-bar__title {
+  font-size: 20px;
+}
+</style>

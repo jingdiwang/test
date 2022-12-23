@@ -14,7 +14,7 @@ export default {
     }
   },
   components: {
-    tabbar
+    tabbar,
   },
   watch: {
     $route: {
