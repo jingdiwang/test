@@ -5,5 +5,5 @@ export function indexInfo() {
 }
 
 export function categoriesInfo() {
-  return http.get('/categories')4
+  return http.get('/categories')
 }
