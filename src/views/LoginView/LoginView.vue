@@ -9,7 +9,7 @@
         <van-field v-model="password" type="password" name="密码" label="密码" placeholder="密码"
           :rules="[{ required: true, message: '请填写密码' }]" />
         <Verify ref="veri" :type="2" @error="alertFn(2)" @success="alertFn(1)" :showButton="false"></Verify>
-        <p class="link-register" @click="isTitle = !isTitle">{{ isTitle ? '立即注册' : '已有账号，立即登录' }}</p>
+        <span class="link-register" @click="isTitle = !isTitle">{{ isTitle ? '立即注册' : '已有账号，立即登录' }}</span>
         <div style="margin: 16px;">
           <van-button round block type="info" native-type="submit">{{ isTitle ? '登录' : '注册' }}</van-button>
         </div>
@@ -118,8 +118,9 @@ export default {
     }
 
     .link-register {
+
       margin: 10px;
-      text-align: left;
+      float: left;
       color: #1989fa;
       font-size: 14px;
     }
